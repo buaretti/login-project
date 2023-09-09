@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css" />
     <link rel="stylesheet" href="estilos/media-query.css" />
   </head>
@@ -17,7 +18,22 @@
             Welcome back. Sign in to access your account and be able to make the
             settings in your environment.
           </p>
-          <form action="login.php" method="post"></form>
+          <form action="login.php" method="post" autocomplete="on">
+            <div class="field">
+              <span class="material-symbols-outlined">person</span>
+              <input type="email" name="login" id="ilogin" placeholder="your e-mail" autocomplete="email" required maxlength="30">
+              <label for="ilogin">Login</label>
+            </div>
+            <div class="field">
+              <span class="material-symbols-outlined">vpn_key</span>
+              <input type="password" name="password" id="password" placeholder="your password" autocomplete="current-password" required maxlength="20" minlength="8">
+              <label for="password">Password</label>
+            </div>
+            <input type="submit" value="Enter">
+            <a href="forgot.html">
+              Forgot password <span class="material-symbols-outlined">mail</span>
+            </a>
+            </form>
         </div>
       </section>
     </main>
